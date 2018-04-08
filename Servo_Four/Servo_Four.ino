@@ -9,7 +9,7 @@ int pos = 0;
 void setup() {
   myservo.attach(3);//一号D3
   myservo1.attach(5);//二号D5
-  myservo2.attach(7);//三号D7
+  myservo2.attach(6);//三号D7
   myservo3.attach(9);//四号D9
 }
 
