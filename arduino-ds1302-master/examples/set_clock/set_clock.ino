@@ -47,7 +47,8 @@ void printTime() {
            day.c_str(),
            t.yr, t.mon, t.date,
            t.hr, t.min, t.sec);
-
+//这里是输出的格式：4位年/2位月/2位日
+                // 2为时/2位分/2位秒
   // Print the formatted string to serial so we can see the time.
   Serial.println(buf);
 }
