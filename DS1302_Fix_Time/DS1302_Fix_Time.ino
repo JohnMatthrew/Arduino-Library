@@ -1,3 +1,5 @@
+#include <DS1302.h>
+
 /*
  * Producer:小明明
  * 该程序用于修正DS1302类的RTC时钟模块
@@ -7,7 +9,6 @@
  
 #include <stdio.h>
 //加上你的时钟RTC的头文件（也就是驱动）
-#include <DS1302.h>
 /*
  * 如何知道自己的时钟芯片信息呢？
  * 可以去www.alldatasheet.com去查找哦~
@@ -28,7 +29,7 @@ const int kSclkPin = 7;  // 串行时钟口 SCLK
 // 调库使用按照上面配置I/O口
 DS1302 rtc(kCePin, kIoPin, kSclkPin);
 //下面是规整星期信息输出。
-String dayAsString(const Time::day) {
+String dayAsString(const Time::Day day) {
   switch (day) {
     case Time::kSunday: return "Sunday";
     case Time::kMonday: return "Monday";
