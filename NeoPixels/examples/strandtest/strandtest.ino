@@ -1,9 +1,11 @@
 #include <Adafruit_NeoPixel.h>
+
+
 #ifdef __AVR__
   #include <avr/power.h>
 #endif
 
-#define PIN 6
+#define PIN 
 
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = Arduino pin number (most are valid)
