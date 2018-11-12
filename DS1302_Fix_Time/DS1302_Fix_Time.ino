@@ -22,9 +22,9 @@
 namespace {
   
 
-const int kCePin   = 5;  // 芯片使能脚 CE
-const int kIoPin   = 6;  // 输入口 I/O
-const int kSclkPin = 7;  // 串行时钟口 SCLK
+const int kCePin   = 7;  // 芯片使能脚 CE
+const int kIoPin   = 8;  // 输入口 I/O
+const int kSclkPin = 9;  // 串行时钟口 SCLK
 
 // 调库使用按照上面配置I/O口
 DS1302 rtc(kCePin, kIoPin, kSclkPin);
@@ -66,7 +66,7 @@ void setup() {
 
   // 开始准备写入校准时间
   // 格式：年，月，日，时，分，秒，周几
-  Time t(2018, 4, 26, 19, 51, 00, Time::kThursday);
+  Time t(2018, 11, 5, 12, 50, 30, Time::kMonday);
 
   // 写入校准时间入RTC中
   rtc.time(t);

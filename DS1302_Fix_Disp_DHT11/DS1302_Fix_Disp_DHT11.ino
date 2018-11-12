@@ -69,7 +69,7 @@ void printTime() {
 }
 void setup() {
   //旋转屏幕180
-  u8g.setRot180();
+  u8g.setRot180();///必需时可使用（本处使用了）
   Serial.begin(9600);//设定串口输出波特率（看协议）
   //上面一条用于串口打印
   //关闭芯片写保护(写入时间才用到)
@@ -99,6 +99,9 @@ void temp_humid()
   float t = dht.readTemperature();
   if (isnan(h) || isnan(t)) {
     Serial.println("Failed to read !");
+    u8g.setFont(u8g_font_6x13);
+    u8g.drawStr( 40, 32, "Fail");
+    u8g.drawStr( 40, 42, "Fail");
     return;
   }
   /*Serial.print("Humidity: ");
